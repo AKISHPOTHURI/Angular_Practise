@@ -1,6 +1,7 @@
 # Practise
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11 Node: 16.9.0
+Package Manager: npm 7.21.1.
 
 ## Development server
 
