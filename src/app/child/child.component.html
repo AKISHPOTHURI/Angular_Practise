@@ -1,0 +1,40 @@
+<!-- <p>child works!</p> -->
+<div class="container">
+    <input disabled="false" type="text" value="123">
+    <h1>{{"Hello" + parentData}}</h1>
+    <button (click) = "fireEvent()">Send Event</button>
+    <!-- Class Binding -->
+    <h2 class="text-special" [class]="successClass">practise</h2>
+    <h2 [class.text-danger]="hasError">practise</h2>
+    <h2 [ngClass]="messageClasses">Message</h2>
+    <!-- style binding -->
+    <h2 [style.color]="'orange'">Style Binding</h2> 
+    <h2 [style.color]="hasError ? 'red' : 'green'">Style Binding 2</h2>            
+    <h2 [style.color]="highlightColor">Style Binding 3</h2>
+    <h2 [ngStyle]="titleStyles">Style Binding 4</h2>
+    <!-- event binding -->
+    <button (click)="onClick($event)">Greet</button>
+    <h2>{{greeting}}</h2>
+    <h2>--------------Two Way Binding--------------------</h2>
+    <!-- Two way binging -->
+    <input #myvalue type="text">
+    <button (click)="logMessage(myvalue.value)">Log</button> <br>
+    <!-- another way -->
+    <input [(ngModel)] = "name" type="text">
+    {{name}}
+    <!-- ngIf -->
+    <h1 *ngIf="display">This is ngIf</h1> <br>
+    <button (click)="toggle()">toggle</button>
+    <!-- ngSwitch -->
+    <h1>ngSwitch</h1>
+    <div [ngSwitch]="color">
+        <h1 *ngSwitchCase="'red'"> you picked a red colour</h1>
+        <h1 *ngSwitchCase="'blue'"> you picked a blue colour</h1>
+        <h1 *ngSwitchCase="'pink'"> you picked a pink colour</h1>
+        <h1 *ngSwitchDefault>Pick Again</h1>
+    </div>
+    <h1>ngFor</h1>
+    <div *ngFor="let i of animals">
+        <h3>{{i}}</h3>
+    </div>
+</div>
