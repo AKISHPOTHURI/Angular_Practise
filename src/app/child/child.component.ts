@@ -21,7 +21,7 @@ export class ChildComponent implements OnInit {
   }
 
   public greeting = "";
-
+  public twoway = "";
   public name = "";
 
   public display = true;
@@ -40,6 +40,11 @@ export class ChildComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  displayTwoway(){
+    this.name = this.twoway;
+  }
+
   fireEvent(){
     this.childEvent.emit('Hello Akish')
   }

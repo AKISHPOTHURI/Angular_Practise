@@ -20,7 +20,8 @@
     <input #myvalue type="text">
     <button (click)="logMessage(myvalue.value)">Log</button> <br>
     <!-- another way -->
-    <input [(ngModel)] = "name" type="text">
+    <input [(ngModel)] = "twoway" type="text">
+    <button (click)="displayTwoway()">display</button>
     {{name}}
     <!-- ngIf -->
     <h1 *ngIf="display">This is ngIf</h1> <br>
@@ -37,4 +38,4 @@
     <div *ngFor="let i of animals">
         <h3>{{i}}</h3>
     </div>
-</div>
+<!-- </div> -->
